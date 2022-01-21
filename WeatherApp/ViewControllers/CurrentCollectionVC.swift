@@ -11,8 +11,7 @@ import UIKit
 class CurrentCollectionVC: UICollectionViewController {
     
     private var allCities = CityWeather.getCity()
-    private var cityUrl: String!
-    private var weatherData: [WeatherData]?
+    private var weatherData: WeatherData?
     
     
     override func viewDidLoad() {
@@ -20,6 +19,11 @@ class CurrentCollectionVC: UICollectionViewController {
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let dailyTBVC = segue.destination as? DailyTBVC else { return }
+        guard let indexPath = collectionView.indexPathsForSelectedItems else { return }
+        dailyTBVC.cities = allCities.cities[indexPath]
+    }
     
     // MARK: UICollectionViewDataSource
     
@@ -31,8 +35,7 @@ class CurrentCollectionVC: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "currentCell", for: indexPath) as! CurrentCell
         let city = allCities.cities[indexPath.item]
         cell.configure(from: city)
-//        self.collectionView.reloadData()
-        
+        title = "Погода на сегодня"
         
         return cell
     }
@@ -41,19 +44,5 @@ class CurrentCollectionVC: UICollectionViewController {
 extension CurrentCollectionVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: UIScreen.main.bounds.width - 20, height: 100)
-    }
-}
-
-extension CurrentCollectionVC {
-    func fetchDataWithAlomafire(_ url: String) {
-        NetworkManager.shared.fetchData(url) { result in
-            switch result {
-            case .success( let weathers):
-                self.weatherData = weathers
-                self.collectionView.reloadData()
-            case .failure( let error):
-                print(error)
-            }
-        }
     }
 }

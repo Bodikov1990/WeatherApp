@@ -23,37 +23,48 @@ class NetworkManager {
     static var shared = NetworkManager()
     private init() {}
     
-    
-    //    MARK: - Alamofire
-    
-    func fetchData(_ url: String, completion: @escaping(Result<[WeatherData], NetworkError>) -> Void) {
-        AF.request(url)
-            .validate()
-            .responseJSON { dataResponse in
-
-                switch dataResponse.result {
-                case .success(let value):
-                    let weathers = WeatherData.getWeather(from: value)
-                    print(weathers)
-                    completion(.success(weathers))
-                case .failure:
-                    completion(.failure(.decodingError))
-                }
+    func fetchImage(from url: String?, completion: @escaping(Result<Data, NetworkError>) -> Void) {
+        guard let url = URL(string: url ?? "") else {
+            completion(.failure(.invalidURL))
+            return
+        }
+        DispatchQueue.global().async {
+            guard let imageData = try? Data(contentsOf: url) else {
+                completion(.failure(.noData))
+                return
             }
-
+            DispatchQueue.main.async {
+                completion(.success(imageData))
+            }
+        }
     }
     
-    func getImage(from url: String, completion: @escaping(Result<Data, NetworkError>) -> Void) {
-        AF.download(url)
-            .validate()
-            .responseData { response in
-                switch response.result {
-                    
-                case .success(let value):
-                    completion(.success(value))
-                case .failure(_):
-                    completion(.failure(.decodingError))
-                }
+    func fetch<T: Decodable>(dataType: T.Type, from url: String, convertFromSnakeCase: Bool = true, completion: @escaping(Result<T, NetworkError>) -> Void) {
+        guard let url = URL(string: url) else {
+            completion(.failure(.invalidURL))
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) { data, _, error in
+            guard let data = data else {
+                completion(.failure(.noData))
+                print(error?.localizedDescription ?? "No error description")
+                return
             }
+            do {
+                let decoder = JSONDecoder()
+                if convertFromSnakeCase {
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                }
+                
+                let type = try decoder.decode(T.self, from: data)
+                DispatchQueue.main.async {
+                    completion(.success(type))
+                }
+            } catch {
+                completion(.failure(.decodingError))
+            }
+        }.resume()
     }
+    
 }
