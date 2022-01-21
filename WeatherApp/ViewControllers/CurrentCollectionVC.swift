@@ -19,10 +19,15 @@ class CurrentCollectionVC: UICollectionViewController {
         
     }
     
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        let cities = allCities.cities[indexPath.item]
+        performSegue(withIdentifier: "showTableView", sender: cities)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let dailyTBVC = segue.destination as? DailyTBVC else { return }
-        guard let indexPath = collectionView.indexPathsForSelectedItems else { return }
-        dailyTBVC.cities = allCities.cities[indexPath]
+        dailyTBVC.cities = sender as? Cities
     }
     
     // MARK: UICollectionViewDataSource

@@ -67,6 +67,11 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dailyWeatherLabel" destination="6Sn-me-9A0" id="ugE-Fh-q3o"/>
+                                    <outlet property="dateLabel" destination="ARI-4E-B0u" id="hxB-Cq-hex"/>
+                                    <outlet property="weatherImage" destination="QSs-SL-rgP" id="maU-rd-q9X"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -162,6 +167,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="7Py-8N-J6g" firstAttribute="leading" secondItem="X8M-Dp-Z2U" secondAttribute="trailing" constant="8" symbolic="YES" id="9BS-Pe-Ett"/>
                                         <constraint firstItem="iad-Xo-x7X" firstAttribute="top" relation="lessThanOrEqual" secondItem="9NJ-g0-aTN" secondAttribute="bottom" constant="27.666666666666668" id="DC9-h8-4BK"/>
@@ -197,7 +203,7 @@
                                     <outlet property="descriptionLanel" destination="MaA-ha-qNB" id="Uaj-bo-62D"/>
                                     <outlet property="feelsLabel" destination="LgR-Ot-xd4" id="MXZ-iU-VWk"/>
                                     <outlet property="windSpeedLabel" destination="ks5-91-eid" id="KLb-iQ-25A"/>
-                                    <segue destination="kZZ-5s-qUn" kind="show" id="R1G-g3-P4n"/>
+                                    <segue destination="kZZ-5s-qUn" kind="show" identifier="showTableView" id="R1G-g3-P4n"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -220,6 +226,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NPe-Zc-znE">
                         <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

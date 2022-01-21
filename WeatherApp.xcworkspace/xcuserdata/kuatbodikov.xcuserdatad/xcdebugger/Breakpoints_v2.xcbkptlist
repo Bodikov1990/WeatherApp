@@ -3,4 +3,129 @@
    uuid = "2435B2D2-BC13-4658-B7DD-F4043BF14E3A"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "796D6ADC-6E3F-426C-8B4C-90DA87BEDA3C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherApp/ViewControllers/DailyTBVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "DailyTBVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "796D6ADC-6E3F-426C-8B4C-90DA87BEDA3C - aadc70edc04689bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherApp.DailyTBVC.cities.getter : Swift.Optional&lt;WeatherApp.Cities&gt;"
+                  moduleName = "WeatherApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuatbodikov/Documents/GitHub/WeatherApp/WeatherApp/ViewControllers/DailyTBVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "124">
+               </Location>
+               <Location
+                  uuid = "796D6ADC-6E3F-426C-8B4C-90DA87BEDA3C - f7ed8c604d51b8a9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherApp.DailyTBVC.cities.setter : Swift.Optional&lt;WeatherApp.Cities&gt;"
+                  moduleName = "WeatherApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuatbodikov/Documents/GitHub/WeatherApp/WeatherApp/ViewControllers/DailyTBVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "188">
+               </Location>
+               <Location
+                  uuid = "796D6ADC-6E3F-426C-8B4C-90DA87BEDA3C - 783861f1b5ead3cc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherApp.DailyTBVC.cities.modify : Swift.Optional&lt;WeatherApp.Cities&gt;"
+                  moduleName = "WeatherApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuatbodikov/Documents/GitHub/WeatherApp/WeatherApp/ViewControllers/DailyTBVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "796D6ADC-6E3F-426C-8B4C-90DA87BEDA3C - e1caf48b928c9b36"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherApp.DailyTBVC.cities.modify : Swift.Optional&lt;WeatherApp.Cities&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "WeatherApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuatbodikov/Documents/GitHub/WeatherApp/WeatherApp/ViewControllers/DailyTBVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "796D6ADC-6E3F-426C-8B4C-90DA87BEDA3C - 933dfb4a72f35dc3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherApp.DailyTBVC.init(style: __C.UITableViewStyle) -&gt; WeatherApp.DailyTBVC"
+                  moduleName = "WeatherApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuatbodikov/Documents/GitHub/WeatherApp/WeatherApp/ViewControllers/DailyTBVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "796D6ADC-6E3F-426C-8B4C-90DA87BEDA3C - cb440b7de950ad46"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherApp.DailyTBVC.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; WeatherApp.DailyTBVC"
+                  moduleName = "WeatherApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuatbodikov/Documents/GitHub/WeatherApp/WeatherApp/ViewControllers/DailyTBVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  uuid = "796D6ADC-6E3F-426C-8B4C-90DA87BEDA3C - bbffec6f00b9e28d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherApp.DailyTBVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;WeatherApp.DailyTBVC&gt;"
+                  moduleName = "WeatherApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kuatbodikov/Documents/GitHub/WeatherApp/WeatherApp/ViewControllers/DailyTBVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "68">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -44,7 +44,7 @@ struct Current: Decodable {
     
     var wind: String {
         """
-        Скорость ветра: \(String(format: "%.00f", windSpeed ?? 0))
+        Скорость ветра: \(String(format: "%.00f", windSpeed ?? 0)) м/сек
         """
     }
 
@@ -86,4 +86,7 @@ struct FeelsLike: Decodable {
 // MARK: - Temp
 struct Temp: Decodable {
     let day, min, max, night: Double?
+    var dayAndNight: String {
+        "\(String(format: "%.00f", day ?? 0)) / \(String(format: "%.00f", night ?? 0))"
+    }
 }
