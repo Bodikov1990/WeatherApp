@@ -31,7 +31,7 @@ struct Current: Decodable {
     }
     var temperture: String {
         """
-        \(String(format: "%.00f", temp ?? 0))
+        \(String(format: "%.00f", temp ?? 0))°C
         
         """
     }
@@ -44,7 +44,7 @@ struct Current: Decodable {
     
     var wind: String {
         """
-        Скорость ветра: \(String(format: "%.00f", windSpeed ?? 0)) м/сек
+        Скорость ветра: \(String(format: "%.00f", windSpeed ?? 0)) км/ч
         """
     }
 
@@ -62,7 +62,7 @@ struct Weather: Decodable {
     
     var weatherDescription: String {
         """
-        Описание: \(description ?? "")
+        \(description ?? "")
         """
     }
 
@@ -81,6 +81,15 @@ struct Daily: Decodable {
 // MARK: - FeelsLike
 struct FeelsLike: Decodable {
     let day, night: Double?
+    var feelDay: String {
+        """
+        Ощущение как: \(String(format: "%.00f", day ?? 0))°C
+        """
+    }
+    
+    var feelNight: String {
+        "Ночью: \(String(format: "%.00f", night ?? 0))°C"
+    }
 }
 
 // MARK: - Temp
@@ -89,4 +98,16 @@ struct Temp: Decodable {
     var dayAndNight: String {
         "\(String(format: "%.00f", day ?? 0)) / \(String(format: "%.00f", night ?? 0))"
     }
+    
+    var mainTemp: String {
+        "\(String(format: "%.00f", day ?? 0))°C"
+    }
+    var dayTemp: String {
+        "Днем: \(String(format: "%.00f", day ?? 0))°C"
+    }
+    
+    var nightTemp: String {
+        "Ночью: \(String(format: "%.00f", night ?? 0))°C"
+    }
+    
 }

@@ -39,7 +39,7 @@ class DailyTVCell: UITableViewCell {
         let currentEpochtime = epochTime
         let date = NSDate(timeIntervalSince1970: TimeInterval(currentEpochtime))
         let formatter = DateFormatter()
-        formatter.dateFormat = "dd.MM"
+        formatter.dateFormat = "E. dd MMM"
         dates = formatter.string(from: date as Date)
     }
 }

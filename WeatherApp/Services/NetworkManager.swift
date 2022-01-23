@@ -8,9 +8,6 @@
 import Foundation
 import Alamofire
 
-enum Link: String {
-    case mainUrl = "https://api.openweathermap.org/data/2.5/onecall?lat=50.265108&lon=57.205390&exclude=minutely,alerts,hourly&units=metric&lang=ru&appid=4ef2e9edd95153ca4989b50f0fafc65f"
-}
 
 enum NetworkError: Error {
     case invalidURL
